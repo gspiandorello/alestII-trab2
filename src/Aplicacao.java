@@ -41,7 +41,6 @@ public class Aplicacao {
                     opcaoEscolhida = "casocohen60.txt";
                     break;
                 default:
-                    System.out.println("Opcao invalida! Por favor digite novamente.");
                     System.out.println("");
                     break;
             }
@@ -49,7 +48,10 @@ public class Aplicacao {
             try{
                 leArquivoTexto("casos_cohen_t2/" + opcaoEscolhida);;
             } catch (IOException e){
-
+                if(!opcao.equals("0")){
+                    System.out.println("Erro ao ler o arquivo, por favor digite outra opção.");
+                    System.out.println("");
+                }
             }
 
 
